@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const studentRoute = require('./routes/student.route.js');
+const studentRoute = require('../routes/student.route.js');
 const app = express();
 
 //middleware
@@ -28,4 +28,5 @@ mongoose.connect("mongodb+srv://harshalmakode26:K6woOov6pvvf831o@cruddb.mlexk.mo
     console.log("Connection failed!");
 });
 
+export default app;
 
