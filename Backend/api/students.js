@@ -1,6 +1,6 @@
-// api/students.js
-import dbConnect from '../../utils/dbConnect'; // Ensure this is correctly defined
-import Student from '../../models/student.model'; // Make sure this path is correct based on your structure
+// Backend/api/students.js
+import dbConnect from './dbConnect'; // Adjust the path based on your structure
+import Student from '../models/student.model'; // Ensure this path is correct
 
 export default async function handler(req, res) {
     await dbConnect(); // Connect to your MongoDB

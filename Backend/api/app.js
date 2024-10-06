@@ -20,9 +20,6 @@ app.get('/', (req,res)=>{
 mongoose.connect("mongodb+srv://harshalmakode26:K6woOov6pvvf831o@cruddb.mlexk.mongodb.net/?retryWrites=true&w=majority&appName=crudDB")
 .then(() => {
     console.log("Connected to database!");
-    app.listen(3000, ()=>{
-        console.log('Server is running on port 3000');
-    });
 })
 .catch(() => {
     console.log("Connection failed!");
