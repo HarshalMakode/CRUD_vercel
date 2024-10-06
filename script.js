@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let mbno = document.querySelector('input[name="phone"]').value;
 
             // POST request to add a new student
-            fetch("https://backend-2s9onzf8p-harshalmakodes-projects.vercel.app/api/students", {
+            fetch("https://crud-copy-8zbrc39cz-harshalmakodes-projects.vercel.app/api/students", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to fetch and display students in the table
 function fetchStudents() {
-    fetch("https://backend-2s9onzf8p-harshalmakodes-projects.vercel.app/api/students")
+    fetch("https://crud-copy-8zbrc39cz-harshalmakodes-projects.vercel.app/api/students")
         .then((response) => response.json())
         .then((data) => {
             let tableBody = document.querySelector("tbody");
@@ -92,7 +92,7 @@ function attachDeleteListeners() {
             console.log("Deleting student with ID:", studentId);
 
             // DELETE request to remove the student
-            fetch(`https://backend-2s9onzf8p-harshalmakodes-projects.vercel.app/api/students/${studentId}`, {
+            fetch(`https://crud-copy-8zbrc39cz-harshalmakodes-projects.vercel.app/api/students/${studentId}`, {
                 method: "DELETE",
             })
                 .then((response) => {
@@ -117,7 +117,7 @@ function attachEditListeners() {
             console.log("Edit button clicked for student ID:", studentId);
 
             // Fetch the student details to pre-fill the form
-            fetch(`https://backend-2s9onzf8p-harshalmakodes-projects.vercel.app/api/students/${studentId}`)
+            fetch(`https://crud-copy-8zbrc39cz-harshalmakodes-projects.vercel.app/api/students/${studentId}`)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error("Network response was not ok");
@@ -147,7 +147,7 @@ function attachEditListeners() {
         let studentId = document.querySelector(".edit").dataset.id; // Get the ID of the student being edited
 
         // PUT request to update the student
-        fetch(`https://backend-2s9onzf8p-harshalmakodes-projects.vercel.app/api/students/${studentId}`, {
+        fetch(`https://crud-copy-8zbrc39cz-harshalmakodes-projects.vercel.app/api/students/${studentId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
