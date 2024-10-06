@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const studentRoute = require('../routes/student.route.js');
+const studentRoute = require('./routes/student.route.js');
 const app = express();
 
 //middleware
