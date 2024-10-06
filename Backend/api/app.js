@@ -17,6 +17,11 @@ app.get('/', (req,res)=>{
     res.send("Hello form Node API server")
 });
 
+app.get("/api/students", (req, res) => {
+    console.log("Received a request for students");
+    // your logic here
+});
+
 mongoose.connect("mongodb+srv://harshalmakode26:K6woOov6pvvf831o@cruddb.mlexk.mongodb.net/?retryWrites=true&w=majority&appName=crudDB")
 .then(() => {
     console.log("Connected to database!");
