@@ -28,5 +28,5 @@ mongoose.connect("mongodb+srv://harshalmakode26:K6woOov6pvvf831o@cruddb.mlexk.mo
     console.log("Connection failed!");
 });
 
-export default app;
+module.exports = app;
 
